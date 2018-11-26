@@ -17,8 +17,9 @@
 
     <!-- 一般和artifactId一致 -->
     <name>tuling-maven</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <!-- github location-->
+    <url>https://github.com/qinjian0306/maven</url>
+    <inceptionYear>2018</inceptionYear>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
