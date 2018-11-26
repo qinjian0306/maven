@@ -56,6 +56,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!--
+            在父pom中使用dependencyManagement管理 统一版本
+            想要子类依赖，必须在子类中显示的定义此依赖，无需指定版本号，会使用父pom中统一管理的版本号
+         -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
 
     </dependencies>
 
