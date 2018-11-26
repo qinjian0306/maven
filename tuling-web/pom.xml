@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tuling-maven</artifactId>
+        <groupId>com.smr.pc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>tuling-web</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+        <!--
+            依赖原则
+               第一原则：最短路径优先。
+               第二原则：相同路径下配置在前的优先
+         -->
+        <dependency>
+            <groupId>com.smr.pc</groupId>
+            <artifactId>tuling-maven-service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.smr.pc</groupId>
+            <artifactId>tuling-maven-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!--
+            依赖范围
+                compile(默认): 编译范围，编译和打包都会依赖。
+                provided：提供范围，编译时依赖，但不会打包进去。如：servlet-api.jar
+                runtime：运行时范围，打包时依赖，编译不会。如：mysql-connector-java.jar
+                test：测试范围，编译运行测试用例依赖，不会打包进去。如：junit.jar
+                system：表示由系统中CLASSPATH指定。编译时依赖，不会打包进去。配合<systemPath> 一起使用。示例：java.home下的tool.jar
+         -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.46</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+
+</project>
