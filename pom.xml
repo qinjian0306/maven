@@ -21,6 +21,42 @@
     <url>https://github.com/qinjian0306/maven</url>
     <inceptionYear>2018</inceptionYear>
 
+
+    <!-- 下载jar 如果settings也配置的下载路径，则以settings为下载路径-->
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>nexus repository</name>
+            <url>http://127.0.0.1:8088/repository/maven-public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+    <!-- 上传jar -->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>release respository</name>
+            <url>http://127.0.0.1:8088/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshot respository</name>
+            <url>http://127.0.0.1:8088/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
