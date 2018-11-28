@@ -22,7 +22,7 @@
     <inceptionYear>2018</inceptionYear>
 
 
-    <!-- 下载jar 如果settings也配置的下载路径，则以settings为下载路径-->
+    <!-- 下载jar 如果settings也配置的下载路径，则以settings为下载路径 -->
     <repositories>
         <repository>
             <id>nexus</id>
@@ -54,7 +54,6 @@
             <url>http://127.0.0.1:8088/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
 
 
     <properties>
