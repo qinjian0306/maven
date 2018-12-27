@@ -16,7 +16,7 @@
         <!--
             依赖原则
                第一原则：最短路径优先。
-               第二原则：相同路径下配置在前的优先
+               第二原则：相同路径下高版本优先级高于低版本
          -->
         <dependency>
             <groupId>com.smr.pc</groupId>
@@ -28,6 +28,20 @@
             <artifactId>tuling-maven-common</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.19.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>5.0.0.Alpha1</version>
+        </dependency>
+
+
+
 
         <!--
             依赖范围
